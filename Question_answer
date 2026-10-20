@@ -1,0 +1,18 @@
+Q1
+1. Simplicity
+When one class has 600 lines and does many different jobs, the code becomes difficult to understand. For example, changing the user interface may affect the network code.
+Testability
+It is difficult to test the class because it depends on the server, user interface, and local storage. Testing one feature may require setting up all these parts.
+Low-cost maintenance
+If the server response format changes, we may need to modify the large class in several places. Separating responsibilities makes changes easier.
+What would I move first?
+I would move the network request and its related logic into a separate repository. This would keep network operations separate from the user interface and make the code easier to test.
+
+Q2
+First, understand the existing application and identify what each class does.
+Identify the main problems and responsibilities that are mixed together.
+Learn the available architectural patterns and understand their differences.
+Choose a pattern that fits the needs of the project.
+Separate responsibilities gradually and test the changes.
+The first step must be understanding the existing application before choosing a pattern.
+“Use MVVM everywhere” is not a good answer because every project has different requirements. A small application may not need a complex architecture, while a larger application may need a different structure.
